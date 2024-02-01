@@ -1,4 +1,4 @@
-SynthDerm Dataset: https://affect.media.mit.edu/dissect/synthderm
+SynthDerm Dataset: https://mitmedialabaffectivecomputing.github.io/SynthDermDataset/
 
 
 
@@ -10,11 +10,11 @@ Files
 
 You can download the newly generated SynthDerm dataset and the accompanying labels:
 
-Images (~2.5MB): https://affect.media.mit.edu/dissect/synthderm/images.zip
+Images (~2.5MB): https://mitmedialabaffectivecomputing.github.io/SynthDermDataset/images.zip
 
-Labels: https://affect.media.mit.edu/dissect/synthderm/malignant_binary_classification.txt
+Labels: https://mitmedialabaffectivecomputing.github.io/SynthDermDataset/malignant_binary_classification.txt
 
-Training and test indices: https://affect.media.mit.edu/dissect/synthderm/malignant/train_ids.npy and https://affect.media.mit.edu/dissect/synthderm/malignant/test_ids.npy, respectively.
+Training and test indices: https://mitmedialabaffectivecomputing.github.io/SynthDermDataset/malignant/train_ids.npy and https://mitmedialabaffectivecomputing.github.io/SynthDermDataset/malignant/test_ids.npy, respectively.
 
 
 
