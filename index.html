@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>SynthDerm Dataset</title>
+        <style>
+            html, body {
+                height: 100%;
+            }
+        img.inline {
+            height: 80 %;
+            width: 80 %;
+        }
+            * {
+              box-sizing: border-box;
+            }
+
+            .column {
+              float: left;
+              width: 50.00%;
+              padding: 10px;
+            }
+
+            /* Clearfix (clear floats) */
+            .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SynthDerm Dataset</h1>
+        
+        <div class="row">
+          <div class="column">
+              <figure>
+                  <img src="synthderm.jpg" alt="synthderm illustration" style="width:70%">
+                  <figcaption><span style="font-weight:bold">Figure 1.</span> Illustration of <span style="font-weight:bold"><tt>SynthDerm</tt></span> dataset that we algorithmically generated. <span style="font-weight:bold">Left</span>: Fitzpatrick scale of skin classification based on melanin density. <span style="font-weight:bold">Right</span>: Benign and melanoma samples that represent different characteristics in the dataset.</figcaption>
+              </figure>
+          </div>
+          <div class="column">
+              <figure>
+                  <img src="melanoma_signs_simplified.jpeg" alt="ABCDE of melanoma" style="width:100%">
+                  <figcaption><span style="font-weight:bold">Figure 2.</span> A simplified visual guide to the ABCDE of melanoma [2].</figcaption>
+              </figure>
+          </div>
+        </div>
+
+        <br>
+        
+        <span style="font-weight:bold"><tt>SynthDerm</tt></span> (Figure 1) is a synthetically generated dataset inspired by the real-world characteristics of melanoma skin lesions in dermatology settings [1]. These characteristics include whether the lesion is <span style="color:red;font-weight:bold;text-decoration:underline">a</span>symmetrical, its <span style="color:red;font-weight:bold;text-decoration:underline">b</span>order is irregular or jagged, is unevenly <span style="color:red;font-weight:bold;text-decoration:underline">c</span>olored, has a <span style="color:red;font-weight:bold;text-decoration:underline">d</span>iameter more than 0.25 inches, or is <span style="color:red;font-weight:bold;text-decoration:underline">e</span>volving in size, shape, or color over time. These qualities are usually referred to as ABCDE of melanoma [2] (Figure 2). We generate <span style="font-weight:bold"><tt>SynthDerm</tt></span> algorithmically by varying several factors: skin tone, lesion shape, lesion size, lesion location (vertical and horizontal), and whether there are surgical markings present. We randomly assign one of the following to the lesion shape: round, asymmetrical, with jagged borders, or multi-colored (two different shades of colors overlaid with salt-and-pepper noise). For skin tone values, we simulate Fitzpatrick ratings [3]. Fitzpatrick scale is a commonly used approach to classify the skin by its reaction to sunlight exposure modulated by the density of melanin pigments in the skin. This rating has six values, where 1 represents skin that always burns (lowest melanin) and 6 represents skin that never burns in sunlight (highest melanin). For our synthetic generation, we consider six base skin tones that similarly resemble different amounts of melanin. We also add a small amount of random noise to the base color to add further variety. Overall, <span style="font-weight:bold"><tt>SynthDerm</tt></span> includes more than 2,600 images of size 64x64.
+        
+        <br>
+        
+
+        <h2>Files</h2>
+        
+        Below, you can download the newly generated SynthDerm dataset and the accompanying labels.
+        <ul>
+                    <li><a href=https://affect.media.mit.edu/dissect/synthderm/images.zip>Images</a>  (~2.5MB)</li>
+                    <li><a href=https://affect.media.mit.edu/dissect/synthderm/malignant_binary_classification.txt>Labels</a></li>
+                    <li><a href=https://affect.media.mit.edu/dissect/synthderm/malignant/train_ids.npy> Training</a> and <a href=https://affect.media.mit.edu/dissect/synthderm/malignant/test_ids.npy> test</a> indices.</li>
+                </ul>
+
+        See <a href=https://affect.media.mit.edu/dissect/synthderm/synthderm_description.txt>here </a> for dataset description in plain text format.
+        
+        <h2>License</h2>
+
+        MIT License
+        <br><br>
+
+        Copyright (c) 2021 Asma Ghandeharioun
+        <br><br>
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        <br><br>
+
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        <br><br>
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+
+        
+        <h2>References</h2>
+        [1] Hensin Tsao, Jeannette M Olazagasti, Kelly M Cordoro, Jerry D Brewer, Susan C Taylor, Jeremy S Bordeaux, Mary-Margaret Chren, Arthur J Sober, Connie Tegeler, Reva Bhushan, et al. Early detection of melanoma: reviewing the ABCDEs. Journal of the American Academy of Dermatology, 72(4):717-723, 2015.
+        <br>
+        [2] Darrell S Rigel, Robert J Friedman, Alfred W Kopf, and David Polsky. ABCDE-an evolving concept in the early detection of melanoma. Archives of dermatology, 141(8):1032-1034, 2005.
+        <br>
+        [3] Thomas B Fitzpatrick. The validity and practicality of sun-reactive skin types I through VI. Archives of dermatology, 124(6):869-871, 1988.
+    </body>
+</html>
